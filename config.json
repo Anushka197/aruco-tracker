@@ -1,0 +1,17 @@
+{
+    "aruco": {
+        "dictionary": "DICT_4X4_50",
+        "size_px": 400
+    },
+    "opencv_window": {
+        "title": "Detection",
+        "exit_key": "q",
+        "width": 1200,
+        "height": 720
+    },
+    "camera_params": {
+        "cam_mat": "D:\\AnushkaData\\DA life\\ArucoProjects\\varnavat\\cameraMatrix.pkl",
+        "dist_coeffs": "D:\\AnushkaData\\DA life\\ArucoProjects\\varnavat\\dist.pkl",
+        "mark_len": 50
+    }
+}
