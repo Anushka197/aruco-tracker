@@ -10,7 +10,7 @@ with open('../config.json', 'r') as f:
 
 # Extract config values
 aruco_dict_name = config["aruco"]["dictionary"]
-marker_length_mm = config["camera_params"]["mark_len"] / 1000  # Convert to meters
+marker_length_mm = config["camera_params"]["mark_len"]  # Convert to meters
 
 camera_matrix_file = config["camera_params"]["cam_mat"]
 dist_coeffs_file = config["camera_params"]["dist_coeffs"]

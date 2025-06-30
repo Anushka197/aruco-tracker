@@ -5,21 +5,21 @@ import pickle
 import json
 
 # === Load config ===
-with open("config.json", "r") as f:
+with open("../config.json", "r") as f:
     config = json.load(f)
 
 dict_name = config["aruco"]["dictionary"]
-win_title = config["opencv_window"]["title"]
-exit_key = config["opencv_window"]["exit_key"]
-width = config["opencv_window"]["width"]
-height = config["opencv_window"]["height"]
-marker_length = config["camera_params"]["mark_len"] / 1000.0
+win_title = config["display"]["opencv_window"]["title"]
+exit_key = config["display"]["opencv_window"]["exit_key"]
+width = config["display"]["opencv_window"]["width"]
+height = config["display"]["opencv_window"]["height"]
+marker_length = config["transformation"]["pose_estimation"]["marker_length_meters"]
 
 # Load camera parameters
-with open(config["camera_params"]["cam_mat"], "rb") as f:
+with open(config["camera"]["calibration_files"]["camera_matrix"], "rb") as f:
     camera_matrix = pickle.load(f)
 
-with open(config["camera_params"]["dist_coeffs"], "rb") as f:
+with open(config["camera"]["calibration_files"]["dist_coeffs"], "rb") as f:
     dist_coeffs = pickle.load(f)
 
 # Init ArUco detector

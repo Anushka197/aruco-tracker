@@ -52,7 +52,7 @@ for image in images:
 
 cv.destroyAllWindows()
 
-custom_directory = 'D:\\AnushkaData\\DA life\\ArucoProjects\\varnavat\\'
+custom_directory = '../'
 
 # Calibrate the camera
 ret, cameraMatrix, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, frameSize, None, None)

@@ -7,10 +7,10 @@ with open("../config.json", "r") as f:
     config = json.load(f)
 
 dict_name = config["aruco"]["dictionary"]
-win_title = config["opencv_window"]["title"]
-exit_key = config["opencv_window"]["exit_key"]
-width = config["opencv_window"]["width"]
-height = config["opencv_window"]["height"]
+win_title = config["display"]["opencv_window"]["title"]
+exit_key = config["display"]["opencv_window"]["exit_key"]
+width = config["display"]["opencv_window"]["width"]
+height = config["display"]["opencv_window"]["height"]
 # === Init Dictionary & Detector ===
 aruco_dict = aruco.getPredefinedDictionary(getattr(aruco, dict_name))
 parameters = aruco.DetectorParameters()
