@@ -10,13 +10,13 @@ with open('../config.json', 'r') as f:
 
 # Extract config values
 aruco_dict_name = config["aruco"]["dictionary"]
-marker_length_mm = config["camera_params"]["mark_len"]  # Convert to meters
+marker_length_mm = config["transformation"]["pose_estimation"]["marker_length_meters"]  # Convert to meters
 
-camera_matrix_file = config["camera_params"]["cam_mat"]
-dist_coeffs_file = config["camera_params"]["dist_coeffs"]
+camera_matrix_file = config["camera"]["calibration_files"]["camera_matrix"]
+dist_coeffs_file = config["camera"]["calibration_files"]["dist_coeffs"]
 
-cv_window_title = config["opencv_window"]["title"]
-exit_key = config["opencv_window"]["exit_key"]
+cv_window_title = config["display"]["opencv_window"]["title"]
+exit_key = config["display"]["opencv_window"]["exit_key"]
 
 # === Load camera calibration ===
 def load_camera_calibration(camera_matrix_file, dist_coeffs_file):
